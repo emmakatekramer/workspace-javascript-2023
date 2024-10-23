@@ -13,7 +13,7 @@ var greetings = "";
 if (hoursNow <= 12){
   greetings = "Good Morning";
 }else{
-  greetings = "Good Evening";
+  greetings = "Good Afternoon";
 }
 
 

@@ -23,15 +23,19 @@
             <p>
                 Please display a hello world message in JavaScript. 
                 <script>
-                    document.title = "JavaScript Basic -- In class practice -- Yilian Zhang";
-                    // use document.write to display a message
+                    document.title = "JavaScript Basic -- In class practice -- Emma Kramer";
                     
-                    // use console.log to display a message   
+                    document.write("<p>Hi, great. I am here</p>");
+                    // use console.log to display a message 
+                    console.log("This is for debugging");
+                      
                   
                     
                 </script>
             </p>
             <p> Please import external file hello.js here. 
+
+                <script src="js/hello.js"></script>
                 
             </p>
         </div>
@@ -39,15 +43,48 @@
         <div class="practice">
             <h1> Variable and Arithemetic Operation</h1>
             <p> Practice on variables </p>
+            <script>
+                var a = "5.6";
+                var b = 5.7
+                console.log(typeof a);
 
+                const message = "great";
+                let greeting = "Hi";
+                if (true){
+                    let grerting = "ok";
+                    console.log(greeting);
+                }
+            </script>
+
+
+
+            <script>
+                var a = parseInt("10");
+                var b = 3;
+                var c = a + b;
+                var d = a % b;
+
+                document.write("<p> a + b ="+c+"</p>");
+                document.write("<p> a % b ="+d+"</p>");
+            </script>
 
         </div>
 
         <div class="practice">
             <h1> JavaScript Escape Sequence</h1>
+            <img src="img/die1.png">
             <p> Write an image to the page </p>
-
+            <script>
+                document.write("<img src=\"img/die1.png\">");
+            </script>
             <p> Write a table to the page </p>
+            <script>
+                document.write("<table>");
+                document.write("<tr><td>1</td><td>2</td></tr>");
+                document.write("<tr><td>3</td><td>4</td></tr>");
+                document.write("</table>");
+            </script>
+            
 
         </div>
 
@@ -55,6 +92,16 @@
             <h1>Window and Document Object </h1>
             <p> Try alert, open, location, url </p>
             <script>
+
+                // I hid all of these because to prevent pop up alert
+
+                //window.alert("pop up alert");
+                //alert("another pop up alert");
+                //window.location.assign("https://www.google.com");
+                //console.log(document.location);
+
+
+
 
             </script>
 
