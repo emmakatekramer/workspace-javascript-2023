@@ -121,8 +121,16 @@
             <p id="p1"> Paragraph Number One </p>
             <p id="p2"> Paragraph Number two </p>
             <p id="p3"> Paragraph Number three </p>
-            <p>Please write JavaScript code to change the content of each paragraph.​
-            <p>
+            <p>Please write JavaScript code to change the content of each paragraph.​</p>
+            <script>
+                //change the first paragraph
+                const pOne = document.getElementById("p1");
+                pOne.innerHTML = "<b> Bold </b>";
+                //change the second paragraph
+                const pTwo = document.getElementsByTagName[0];
+                console.log(pTwo);
+
+            </script>
 
 
         </div>
@@ -132,8 +140,25 @@
             <p> Please enter your numbers </p>
             <script>
                 function calculate() {
+                    //get first input
+                    const input1 = document.getElementsByName("num1")[0];
+                    console.log("get the first input"+ input1.value);
+                    
+                    //get the second input
+                    const input2 = document.getElementsByName("num2")[0];
+                    console.log("get the second input"+ input2.value);
 
+                    var a = parseFloat(input1.value);
+                    var b = parseFloat(input2.value);
+                    var c = a + b;
 
+                    //get the result element
+                    const result = document.getElementById("result");
+                    //print the result
+                    result.textContent = c;
+                    
+
+                    
                 }
             </script>
             <p> <input type="text" name="num1" /> + <input type="text" name="num2">
@@ -162,6 +187,16 @@
                     </label>
                 </p>
             </form>
+            <script>
+                //event handler
+                function welcome() {
+                    alert("Thank you!");
+                    
+                }
+                //binding -- register the event
+                const name = document.getElementById("cName");
+                nameE.addeventListener("blur", welcome);
+            </script>
 
         </div>
 
