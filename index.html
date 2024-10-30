@@ -177,7 +177,7 @@
                     </label>
                 </p>
 
-                <p id="message">
+                <p id="checkmessage">
 
                 </p>
 
@@ -190,12 +190,17 @@
             <script>
                 //event handler
                 function welcome() {
-                    alert("Thank you!");
+                    //alert("Thank you!");
+                    const namebox = document.getElementById("cName");
+                    //check and call backend database
+                    var newmessage = "Welcome "+ namebox.value+", you are a new customer";
+                    // put the message back
+                    document.getElementById('checkmessage').textContent = newmessage;
                     
                 }
                 //binding -- register the event
-                const name = document.getElementById("cName");
-                nameE.addeventListener("blur", welcome);
+                const nameE = document.getElementById("cName");
+                nameE.addEventListener("blur", welcome);
             </script>
 
         </div>
@@ -203,8 +208,25 @@
         <div class="practice">
             <h1> Practice - Calculate Square</h1>
             Calculating Square:
-            <input type="text" id="num" placeholder="Type in a number"> <sup> 2 </sup> =
-            <label id="result"> ? </label>
+            <input type="text" id="squarenum" placeholder="Type in a number"> <sup> 2 </sup> =
+            <label id="squareresult"> ? </label>
+                <script>
+                    function dosquare(){
+                        //get the number
+                        const squareE = document.getElementById("squarenum");
+                        var number = parseInt(squareE.value);
+                        console.log("the quare numbre is "+ number);
+                        //calculate the square
+                        var newnum = number * number;
+                        //put it back to the page
+                        document.getElementById("squareresult").textContent = " " + newnum;
+                    }
+
+                    const squareE = document.getElementById("squarenum");
+                    squareE.addEventListener("blur", dosquare);
+                    squareE.addEventListener("change", dosquare);
+                
+                </script>
 
         </div>
 
@@ -218,8 +240,19 @@
 
             <input type="button" id="tryit" value="Click and Display"> 
 
-            <div id="message"> 
+            <div id="htmlcode"> 
             </div>
+            <script>
+                function convertHTML(){
+                    
+                    const codeE = document.getElementById("code");
+                    const htmlcode = document.getElementById("htmlcode");
+                    htmlcodeE.innerHTML = codeE.textContent;
+                    
+                }
+
+                document.getElementById("tryit").addEventListener("click", convertHTML);
+            </script>
 
 
         </div>
