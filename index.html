@@ -276,7 +276,61 @@
             </p>
 
             <script type="text/javascript">
+                //get elements
+                var year = document.getElementById("year");
+                var condition = document.getElementById("condition");
 
+                //add event listener
+                year.addEventListener("change", getPrice, false);
+                condition.addEventListener("change", getPrice, false);
+
+                // event handler
+                function getPrice() {
+                    var year = document.getElementById("year");
+                    var condition = document.getElementById("condition");
+
+                    console.log(year.value);
+                    console.log(year.selectedIndex);
+
+                    if (year.value == "2003" && condition.value == "Fair") {
+                        price = 2000;
+                    } else if (year.value == "2003" && condition.value == "Good") {
+                        price = 3000;
+                    } else if (year.value == "2004" && condition.value == "Fair") {
+                        price = 2200;
+                    } else {
+                        price = 4000;
+                    }
+
+                    document.getElementById("price").innerHTML = "The price is <b> " + price + "</b>";
+
+
+
+                }
+
+
+
+
+
+                    /*var yearValue = year.value;
+                    var conditionValue = condition.value;
+                    var price = 0;
+                    if (yearValue == "2003") {
+                        if (conditionValue == "Fair") {
+                            price = 2000;
+                        } else {
+                            price = 3000;
+                        }
+                    } else {
+                        if (conditionValue == "Fair") {
+                            price = 2200;
+                        } else {
+                            price = 4000;
+                        }
+                    }
+                    document.getElementById("price").textContent = "The price is $" + price;
+                }
+                */
 
 
             </script>
