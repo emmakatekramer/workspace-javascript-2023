@@ -339,9 +339,42 @@
 
         <div class="practice">
             <h1> Decision Statement - Switch</h1>
-            <p> Choose your favorite theme(warm, cool, hot)
+            <p> Choose your favorite theme(warm, cool, hot, dark, original)
                 <input type="text" id="theme">
             </p>
+
+            <script>
+                //get the element
+                var theme = document.getElementById("theme");
+                //add event listener
+                theme.addEventListener("blur", getTheme, false);
+                //action
+                function getTheme() {
+                    var themeValue = document.getElementById("theme").value;
+                    switch (themeValue) {
+                        case "warm":
+                            document.body.style.backgroundColor = "yellow";
+                            break;
+                        case "cool":
+                            document.body.style.backgroundColor = "blue";
+                            break;
+                        case "hot":
+                            document.body.style.backgroundColor = "red";
+                            break;
+                        case "dark":
+                            document.body.style.backgroundColor = "black";
+                            break;
+                        case "original":
+                            document.body.style.backgroundColor = "white";
+                            break;
+                        default:
+                            alert("Please enter a valid theme");
+                    }
+                    
+                }
+
+
+            </script>
 
         </div>
 
